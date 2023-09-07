@@ -17,7 +17,7 @@ import { AdminComponent } from './features/admin/admin.component';
     HomeComponent,
     CatalogComponent,
     AdminComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule

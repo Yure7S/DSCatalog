@@ -22,7 +22,6 @@ header a{
     position: relative;
 }
 
-
 header li a::after{
     content: "";
     position: absolute;
