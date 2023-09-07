@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { AdminComponent } from './features/admin/admin.component';
+import { ButtonMasterComponent } from './shared/components/button-master/button-master.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AdminComponent } from './features/admin/admin.component';
     FooterComponent,
     HomeComponent,
     CatalogComponent,
-    AdminComponent
+    AdminComponent,
+    ButtonMasterComponent
     ],
   imports: [
     BrowserModule,

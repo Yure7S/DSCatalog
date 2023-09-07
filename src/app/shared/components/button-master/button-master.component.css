@@ -1,0 +1,28 @@
+a{
+    background-color: #407BFF;
+    border-radius: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+}
+
+a *{
+    color: white;
+    padding: 0px 30px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+a .arow{
+    background-color: #2632387a;
+    height: 100%;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+}
+
+a span:last-child svg{
+    width: 96%;
+}
