@@ -4,6 +4,7 @@
     box-shadow: 0px 4px 20px 0px #00000040;
     border-radius: 10px;
     padding-bottom: 15px;
+    background-color: white;
 }
 
 .product-card__image{

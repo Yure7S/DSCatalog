@@ -3,9 +3,10 @@ a{
     border-radius: 10px;
     height: 70px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    width: fit-content;
+    width: 100%;
 }
 
 a *{
@@ -13,6 +14,10 @@ a *{
     padding: 0px 30px;
     font-weight: 700;
     font-size: 24px;
+}
+
+a span:nth-child(1){
+    margin: 0px auto;
 }
 
 a .arow{

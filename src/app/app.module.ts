@@ -10,6 +10,8 @@ import { CatalogComponent } from './features/catalog/catalog.component';
 import { AdminComponent } from './features/admin/admin.component';
 import { ButtonMasterComponent } from './shared/components/button-master/button-master.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { LoginFormularyComponent } from './shared/components/login-formulary/login-formulary.component';
+import { InputComponent } from './shared/components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     CatalogComponent,
     AdminComponent,
     ButtonMasterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    LoginFormularyComponent,
+    InputComponent
     ],
   imports: [
     BrowserModule,

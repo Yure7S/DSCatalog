@@ -1,6 +1,6 @@
 .c-filter{
     display: flex;
-    margin: 50px auto;
+    margin: 0px auto 40px;
     align-items: center;
     justify-content: space-between;
 }
@@ -9,30 +9,29 @@
     font-weight: bold;
 }
 
-form{
+.c-filter form{
     box-shadow: 0px 4px 20px 0px #00000040;
     padding: 15px 20px 15px;
     width: 76%;
     border-radius: 10px;
     display: flex;
     gap: 25px;
+    background-color: white;
 }
 
-form input{
+.c-filter input,
+.c-filter select{
     border: 0px;
     border-bottom: 1px solid #E1E1E1;
     padding: 5px 10px;
-}
-
-form input:nth-child(1){
     width: 40%;
 }
 
-form input:nth-child(2){
+.c-filter select{
     width: 35%;
 }
 
-form input:nth-child(3){
+.c-filter input:nth-child(3){
     width: 25%;
     background-color: white;
     border: 1px solid #E1E1E1;
