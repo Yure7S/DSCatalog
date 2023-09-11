@@ -9,6 +9,7 @@ import { HomeComponent } from './features/home/home.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { AdminComponent } from './features/admin/admin.component';
 import { ButtonMasterComponent } from './shared/components/button-master/button-master.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonMasterComponent } from './shared/components/button-master/button-
     HomeComponent,
     CatalogComponent,
     AdminComponent,
-    ButtonMasterComponent
+    ButtonMasterComponent,
+    ProductCardComponent
     ],
   imports: [
     BrowserModule,
