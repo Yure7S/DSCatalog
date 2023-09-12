@@ -1,0 +1,37 @@
+<form action="">
+    <div *ngIf="formType == 1; else register" class="content">
+        <h3>LOGIN</h3>
+        <app-input class="input-01" [placeholder]="'Email'"></app-input>
+        <app-input class="input-01" [placeholder]="'Senha'"></app-input>
+        <span>Esqueci a senha?</span>
+        <app-button-master class="button-master-01" [value]="'LOGAR'" [arrow]="true"></app-button-master>
+        <p>Não tem Cadastro? <a href="/cadastro">CADASTRAR</a></p>
+    </div>
+    <ng-template #register>
+        <div *ngIf="formType == 2; else forgotPassword" class="content">
+            <h3>CADASTRO</h3>
+            <app-input class="input-01" [placeholder]="'Nome'"></app-input>
+            <app-input class="input-01" [placeholder]="'Sobrenome'"></app-input>
+            <app-input class="input-01" [placeholder]="'Email'"></app-input>
+            <app-input class="input-01" [placeholder]="'Digite aqui a senha'"></app-input>
+            <span>A sua senha deve ter pelo menos 8 caracteres e conter pelo menos um número</span>
+            <app-input class="input-01" [placeholder]="'Repita aqui a senha'"></app-input>
+
+            <div class="c-buttons">
+                <a href="">CANCELAR</a>
+                <input type="submit" value="CADASTRAR">
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #forgotPassword>
+        <div class="content">
+            <h3>RECUPERAÇÃO</h3>
+            <app-input class="input-01 negative-margin" [placeholder]="'Digite o Email Cadastrado'"></app-input>
+            <app-input class="input-01 negative-margin" [placeholder]="'Repita o Email Cadastrado'"></app-input>
+            <div class="c-buttons">
+                <a href="">CANCELAR</a>
+                <input type="submit" value="ENVIAR">
+            </div>
+        </div>
+    </ng-template>
+</form>

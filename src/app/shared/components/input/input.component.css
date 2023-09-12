@@ -5,3 +5,7 @@ input{
     border-radius: 10px;
     width: 100%;
 }
+
+input::placeholder{
+    color: #9E9E9E;
+}
