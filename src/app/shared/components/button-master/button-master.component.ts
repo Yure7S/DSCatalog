@@ -9,6 +9,7 @@ export class ButtonMasterComponent {
   @Input() value?: string
   @Input() arrow?: boolean
   @Input() url?: boolean
+  @Input() buttonType?: number
 
   constructor() {
     

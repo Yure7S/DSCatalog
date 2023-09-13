@@ -79,3 +79,10 @@ form .c-buttons{
     color: #DF5753;
 }
 
+/* Recover */
+.c-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -150px;
+}
