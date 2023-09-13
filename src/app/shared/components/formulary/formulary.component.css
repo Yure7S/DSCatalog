@@ -61,16 +61,9 @@ form .c-buttons{
     padding: 0px 50px;
 }
 
-.c-buttons input[type="submit"], .c-buttons a{
-    background-color: #407BFF;
-    border-radius: 10px;
+.c-buttons *{
     width: 50%;
-    color: white;
-    padding: 20px 20px;
-    font-size: 16px;
-    font-weight: bold;
     text-decoration: none;
-    text-align: center;
 }
 
 .c-buttons a{

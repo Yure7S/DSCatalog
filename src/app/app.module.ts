@@ -15,6 +15,7 @@ import { LoginComponent } from './features/login/login.component';
 import { RegisterComponent } from './features/register/register.component';
 import { FormularyComponent } from './shared/components/formulary/formulary.component';
 import { RecoverComponent } from './features/recover/recover.component';
+import { ButtonComponent } from './shared/components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RecoverComponent } from './features/recover/recover.component';
     LoginComponent,
     RegisterComponent,
     FormularyComponent,
-    RecoverComponent
+    RecoverComponent,
+    ButtonComponent
     ],
   imports: [
     BrowserModule,

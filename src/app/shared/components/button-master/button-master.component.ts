@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
 export class ButtonMasterComponent {
   @Input() value?: string
   @Input() arrow?: boolean
-  @Input() url?: boolean
-  @Input() buttonType?: number
+  @Input() url?: string
+  @Input() isSubmit?: boolean
 
   constructor() {
     

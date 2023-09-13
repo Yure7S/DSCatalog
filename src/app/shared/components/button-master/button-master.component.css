@@ -1,4 +1,4 @@
-a{
+a, .c-submit, input{
     background-color: #407BFF;
     border-radius: 10px;
     height: 70px;
@@ -9,18 +9,23 @@ a{
     width: 100%;
 }
 
-a *{
+a *,
+.c-submit svg,
+.c-submit input{
     color: white;
     padding: 0px 30px;
     font-weight: 700;
     font-size: 24px;
+    text-align: center;
+    justify-content: center;
 }
 
-a span:nth-child(1){
+a span:nth-child(1), a button{
     margin: 0px auto;
+    background-color: transparent;
 }
 
-a .arow{
+a .arow, .c-submit span{
     background-color: #2632387a;
     height: 100%;
     display: flex;
@@ -30,4 +35,16 @@ a .arow{
 
 a span:last-child svg{
     width: 98%;
+}
+
+/* Submit button */
+.c-submit{
+    position: relative;
+    justify-content: right;
+}
+
+.c-submit input{
+    position: absolute;
+    background-color: transparent;
+    padding: 0px 72px 0px 0px;
 }

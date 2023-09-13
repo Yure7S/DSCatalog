@@ -1,0 +1,8 @@
+<input *ngIf="!cancelButton; else cancelButtonComponent" type="submit" value="{{value}}">
+<ng-template #cancelButtonComponent>
+    <a href="{{url}}">
+        <button>
+            {{value}}
+        </button>
+    </a>
+</ng-template>
