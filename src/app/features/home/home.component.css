@@ -6,7 +6,7 @@
 }
 
 .content{
-    height: 780px;
+    min-height: 780px;
     display: flex;
     align-items: center;
     width: 87%;
@@ -40,4 +40,26 @@
 .button-master-01{
     position: absolute;
     bottom: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content{
+        gap: 40px;
+        flex-direction: column-reverse;
+        padding: 90px 0px 90px;
+    }
+
+    .content *{
+        margin: 0px auto;
+        text-align: center;
+        position: initial;
+    }
+
+    .box .w50{
+        width: 100%;
+    }
+    
+    .content .button-master-01{
+        max-width: 450px !important;
+    }
 }

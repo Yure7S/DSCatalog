@@ -13,7 +13,6 @@ a *,
 .c-submit svg,
 .c-submit input{
     color: white;
-    padding: 0px 30px;
     font-weight: 700;
     font-size: 24px;
     text-align: center;
@@ -35,6 +34,8 @@ a .arow, .c-submit span{
 
 a span:last-child svg{
     width: 98%;
+    padding: 0px 30px;
+
 }
 
 /* Submit button */
