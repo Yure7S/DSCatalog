@@ -16,6 +16,8 @@ import { RegisterComponent } from './features/register/register.component';
 import { FormularyComponent } from './shared/components/formulary/formulary.component';
 import { RecoverComponent } from './features/recover/recover.component';
 import { ButtonComponent } from './shared/components/button/button.component';
+import { EmphasisLoginComponent } from './shared/components/emphasis-login/emphasis-login.component';
+import { ProductDetailsComponent } from './features/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ButtonComponent } from './shared/components/button/button.component';
     RegisterComponent,
     FormularyComponent,
     RecoverComponent,
-    ButtonComponent
+    ButtonComponent,
+    EmphasisLoginComponent,
+    ProductDetailsComponent
     ],
   imports: [
     BrowserModule,
