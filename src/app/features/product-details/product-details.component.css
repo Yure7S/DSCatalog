@@ -21,11 +21,22 @@
 
 }
 
+.box .w50:first-child a{
+    position: absolute;
+    top: -60px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .box .w50:first-child .c-image{
     border: 1px solid #E1E1E1;
     border-radius: 10px;
     padding: 20px 0px;
     display: flex;
+    margin-bottom: 30px;
     justify-content: center;
 }
 
