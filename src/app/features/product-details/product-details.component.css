@@ -17,7 +17,8 @@
 .box .w50{
     width: 50%;
     position: relative;
-    min-height: 480px;
+    min-height: 590px;
+
 }
 
 .box .w50:first-child .c-image{
@@ -30,6 +31,28 @@
 
 .box .w50:first-child .c-image img{
     height: 350px;
+}
+
+.box .w50:first-child h3{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.box .w50:first-child p{
+    display: flex;
+    align-items: top;
+    margin-top: 10px;
+}
+
+.box .w50:first-child p span:first-child{
+    color: #9E9E9E;
+}
+
+.box .w50:first-child p span:last-child{
+    margin: -5px 0px 0px 5px;
+    color: #407BFF;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .box .w50:last-child{
