@@ -19,6 +19,10 @@
     min-height: 480px;
 }
 
+.content svg{
+    width: 100%;
+}
+
 .box a{
     position: absolute;
     bottom: 0px;
@@ -40,7 +44,9 @@
 .button-master-01{
     position: absolute;
     bottom: 0px;
+    width: 459px;
 }
+
 
 @media screen and (max-width: 1024px) {
     .content{
@@ -55,11 +61,38 @@
         position: initial;
     }
 
+    .content h2{
+        max-width: 590px;
+    }
+
+    .content .c-button{
+        max-width: 500px;
+        margin-top: 50px;
+    }
+
     .box .w50{
         width: 100%;
     }
-    
-    .content .button-master-01{
-        max-width: 450px !important;
+
+    .content svg{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .content h2{
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    .content p{
+        font-size: 16px;
+        margin-top: 15px;
+        max-width: 245px;
+    }
+
+    .content .box .w50{
+        max-height: 100px;
     }
 }

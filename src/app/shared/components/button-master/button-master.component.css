@@ -1,12 +1,13 @@
 a, .c-submit, input{
     background-color: #407BFF;
     border-radius: 10px;
-    height: 70px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     width: 100%;
+    position: relative;
 }
 
 a *,
@@ -17,24 +18,28 @@ a *,
     font-size: 24px;
     text-align: center;
     justify-content: center;
+    padding: 0px 30px;
 }
 
 a span:nth-child(1), a button{
     margin: 0px auto;
     background-color: transparent;
+    padding: 20px 92px 20px 20px;
+    position: relative;
 }
 
 a .arow, .c-submit span{
     background-color: #2632387a;
     height: 100%;
     display: flex;
-    padding: 0px;
     align-items: center;
+    position: absolute;
+    padding: 0px;
+    right: 0%;
 }
 
 a span:last-child svg{
-    width: 98%;
-    padding: 0px 30px;
+    min-width: 10px;
 
 }
 
@@ -48,4 +53,18 @@ a span:last-child svg{
     position: absolute;
     background-color: transparent;
     padding: 0px 72px 0px 0px;
+}
+
+@media screen and (max-width: 414px) {
+
+    a *,
+    .c-submit svg,
+    .c-submit input{
+        font-size: 16px;
+        padding: 0px 20px;
+    }
+
+    a span:nth-child(1), a button{
+        padding: 20px 80px 20px 20px;
+    }
 }
