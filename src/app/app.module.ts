@@ -7,7 +7,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
-import { AdminComponent } from './features/admin/admin.component';
 import { ButtonMasterComponent } from './shared/components/button-master/button-master.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { InputComponent } from './shared/components/input/input.component';
@@ -18,6 +17,10 @@ import { RecoverComponent } from './features/recover/recover.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { EmphasisLoginComponent } from './shared/components/emphasis-login/emphasis-login.component';
 import { ProductDetailsComponent } from './features/product-details/product-details.component';
+import { AdminComponent } from './features/admin/admin.component';
+import { MyProductsComponent } from './features/admin-control-panel/my-products/my-products.component';
+import { MyCategoriesComponent } from './features/admin-control-panel/my-categories/my-categories.component';
+import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,6 @@ import { ProductDetailsComponent } from './features/product-details/product-deta
     FooterComponent,
     HomeComponent,
     CatalogComponent,
-    AdminComponent,
     ButtonMasterComponent,
     ProductCardComponent,
     InputComponent,
@@ -36,7 +38,11 @@ import { ProductDetailsComponent } from './features/product-details/product-deta
     RecoverComponent,
     ButtonComponent,
     EmphasisLoginComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AdminComponent,
+    MyProductsComponent,
+    MyCategoriesComponent,
+    MyUsersComponent
     ],
   imports: [
     BrowserModule,
