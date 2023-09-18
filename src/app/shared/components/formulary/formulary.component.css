@@ -13,7 +13,7 @@
 }
 
 form h3{
-    font-size: 48px;
+    font-size: clamp(24px, 1em + 2.8vw, 48px);
     position: absolute;
     top: 90px;
     margin-bottom: 30px;
@@ -62,7 +62,7 @@ form .c-buttons{
 }
 
 .c-buttons *{
-    width: 50%;
+    width: 100%;
     text-decoration: none;
 }
 
@@ -78,4 +78,24 @@ form .c-buttons{
     flex-direction: column;
     width: 100%;
     margin-top: -150px;
+}
+
+@media screen and (max-width: 414px){
+    .content{
+        padding: 90px 20px 100px;
+        min-height: 800px;
+    }
+
+    form .input-01,
+    form .button-master-01{
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }   
+
+    form .c-buttons{
+        gap: 20px;
+        padding: 0px 50px;
+        flex-direction: column-reverse;
+        padding: 0px 20px;
+    }
 }

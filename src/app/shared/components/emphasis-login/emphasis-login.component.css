@@ -1,6 +1,6 @@
 .c-emphasis{
     width: 100%;
-    padding-right: 10px;
+    padding: 0px 15px 0px;
     max-width: 700px;
     display: flex;
     flex-direction: column;
@@ -10,13 +10,15 @@
 .c-emphasis h2{
     font-size: 55px;
     font-weight: bold;
+    width: 49vw;
+    max-width: 650px;
 }
 
 .c-emphasis p{
     color: #9E9E9E;
     font-size: 24px;
     margin-top: 26px;
-    max-width: 550px;
+    width: 40vw;
 }
 
 @media screen and (max-width: 1024px) {
