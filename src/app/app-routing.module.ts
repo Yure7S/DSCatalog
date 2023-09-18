@@ -14,7 +14,7 @@ import { MyUsersComponent } from './features/admin-control-panel/my-users/my-use
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'catalog', component: CatalogComponent },
-  { path: 'admin', component: AdminComponent, 
+  { path: 'admin', component: AdminComponent, title: "Admin Panel",
     children: [
       { path: 'meus-produtos', component: MyProductsComponent },
       { path: 'minhas-categorias', component: MyCategoriesComponent },
