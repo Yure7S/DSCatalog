@@ -1,0 +1,15 @@
+<button *ngIf="isSubmit; else cancelButton" type="submit">
+    {{value}}
+</button>
+
+<ng-template #cancelButton>
+    <button *ngIf="cancelButton; else defaultButton" routerLink="{{url}}" class="cancel-button">
+        {{value}}
+    </button>
+</ng-template>
+
+<ng-template #defaultButton>
+    <button routerLink="{{url}}">
+        {{value}}
+    </button>
+</ng-template>

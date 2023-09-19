@@ -7,14 +7,14 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
-import { ButtonMasterComponent } from './shared/components/button-master/button-master.component';
+import { ButtonMasterComponent } from './shared/components/buttons/button-master/button-master.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { InputComponent } from './shared/components/input/input.component';
 import { LoginComponent } from './features/login/login.component';
 import { RegisterComponent } from './features/register/register.component';
 import { FormularyComponent } from './shared/components/formulary/formulary.component';
 import { RecoverComponent } from './features/recover/recover.component';
-import { ButtonComponent } from './shared/components/button/button.component';
+import { ButtonComponent } from './shared/components/buttons/button/button.component';
 import { EmphasisLoginComponent } from './shared/components/emphasis-login/emphasis-login.component';
 import { ProductDetailsComponent } from './features/product-details/product-details.component';
 import { AdminComponent } from './features/admin/admin.component';
@@ -22,7 +22,7 @@ import { MyProductsComponent } from './features/admin-control-panel/my-products/
 import { MyCategoriesComponent } from './features/admin-control-panel/my-categories/my-categories.component';
 import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
 import { ProductCardAdminComponent } from './shared/components/product-card-admin/product-card-admin.component';
-import { Button02Component } from './shared/components/button02/button02.component';
+import { Button02Component } from './shared/components/buttons/button02/button02.component';
 import { FormFilterComponent } from './shared/components/form-filter/form-filter.component';
 
 @NgModule({
