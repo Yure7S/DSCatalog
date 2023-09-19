@@ -1,0 +1,19 @@
+button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #E1E1E1;
+    color: #9E9E9E;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.confirmation-button{
+
+}
+
+.cancel-button{
+    color: #DF5753;
+    border: 1px solid #DF5753;
+}

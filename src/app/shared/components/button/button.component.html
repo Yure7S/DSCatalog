@@ -1,8 +1,15 @@
-<input *ngIf="!cancelButton; else cancelButtonComponent" type="submit" value="{{value}}">
-<ng-template #cancelButtonComponent>
-    <a href="{{url}}">
-        <button>
-            {{value}}
-        </button>
-    </a>
+<button *ngIf="isSubmit; else defaultButton" type="submit">
+    {{value}}
+</button>
+
+<ng-template #defaultButton>
+    <button *ngIf="!cancelButton; else cancelButton" routerLink="{{url}}">
+        {{value}}
+    </button>
+</ng-template>
+
+<ng-template #cancelButton>
+    <button routerLink="{{url}}" class="cancel-button">
+        {{value}}
+    </button>
 </ng-template>

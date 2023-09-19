@@ -1,0 +1,19 @@
+<div class="product-card">
+    <div class="product-card__image">
+        <img src="https://d1qbemlbhjecig.cloudfront.net/prod/3.56.2/staticfiles/bento_cms/images/placeholder-image.svg" alt="Product image">
+    </div>
+    <div class="c-info">
+        <div class="c-text">
+            <h3>{{title}}</h3>
+            <p>
+                <span>R$</span>
+                <span>{{price}}</span>
+            </p>
+            <p>{{description}}</p>
+        </div>
+        <div class="c-buttons">
+            <app-button02 [classButton]="'confirmation-button'" [value]="'EDITAR'"></app-button02>
+            <app-button02 [classButton]="'cancel-button'" [value]="'EXCLUIR'"></app-button02>
+        </div>
+    </div>
+</div>

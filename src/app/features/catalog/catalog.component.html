@@ -2,16 +2,7 @@
     <div>
         <div class="c-filter">
             <h2>Catálogo de produtos</h2>
-            <form>
-                <input type="text" placeholder="Pesquisar produto">
-                <select name="category" id="">
-                    <option selected value="">Filtrar por categoria</option>
-                    <option value="name">name</option>
-                    <option value="name">size</option>
-                    <option value="name">color</option>
-                </select>
-                <input type="submit" value="limpar filtro">
-            </form>
+            <app-form-filter></app-form-filter>
         </div>
         <div class="c-products">
             <app-product-card></app-product-card>

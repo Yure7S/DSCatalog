@@ -1,4 +1,4 @@
-input, button{
+button{
     background-color: #407BFF;
     border-radius: 10px;
     height: 60px;
@@ -9,7 +9,7 @@ input, button{
     font-size: 16px;
 }
 
-button{
+.cancel-button{
     background-color: white;
     color: #DF5753;
     border: 1px solid #DF5753;

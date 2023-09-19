@@ -27,12 +27,15 @@ form .button-master-01{
     margin-bottom: 30px;
 }
 
+form .forgot-password,
 form span{
     text-align: left;
     width: 100%;
     font-size: 14px;
     margin: -20px 0px 20px;
     color: #407BFF;
+    text-decoration: none;
+    font-weight: lighter;
 }
 
 form .button-master-01{

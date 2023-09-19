@@ -21,6 +21,9 @@ import { AdminComponent } from './features/admin/admin.component';
 import { MyProductsComponent } from './features/admin-control-panel/my-products/my-products.component';
 import { MyCategoriesComponent } from './features/admin-control-panel/my-categories/my-categories.component';
 import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
+import { ProductCardAdminComponent } from './shared/components/product-card-admin/product-card-admin.component';
+import { Button02Component } from './shared/components/button02/button02.component';
+import { FormFilterComponent } from './shared/components/form-filter/form-filter.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { MyUsersComponent } from './features/admin-control-panel/my-users/my-use
     AdminComponent,
     MyProductsComponent,
     MyCategoriesComponent,
-    MyUsersComponent
+    MyUsersComponent,
+    ProductCardAdminComponent,
+    Button02Component,
+    FormFilterComponent
     ],
   imports: [
     BrowserModule,

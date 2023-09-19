@@ -3,9 +3,9 @@
         <h3>LOGIN</h3>
         <app-input class="input-01" [type]="'email'" [placeholder]="'Email'"></app-input>
         <app-input class="input-01" [type]="'password'" [placeholder]="'Senha'"></app-input>
-        <span>Esqueci a senha?</span>
+        <a class="forgot-password" routerLink="/recuperar">Esqueceu a senha?</a>
         <app-button-master class="button-master-01" [isSubmit]="true" [value]="'LOGAR'" [arrow]="true"></app-button-master>
-        <p>Não tem Cadastro? <a href="/cadastro">CADASTRAR</a></p>
+        <p>Não tem Cadastro? <a routerLink="/cadastro">CADASTRAR</a></p>
     </div>
     <ng-template #register>
         <div *ngIf="formType == 2; else forgotPassword" class="content">
@@ -18,8 +18,8 @@
             <app-input [type]="'password'" class="input-01" [placeholder]="'Repita aqui a senha'"></app-input>
 
             <div class="c-buttons">
-                <app-button [url]="'/'" [cancelButton]="true" [value]="'CANCELAR'"></app-button>
-                <app-button [cancelButton]="false" [value]="'CADASTRAR'"></app-button>
+                <app-button [url]="'/login'" [isCancelButton]="true" [value]="'CANCELAR'"></app-button>
+                <app-button [isSubmit]="true" [value]="'CADASTRAR'"></app-button>
             </div>
         </div>
     </ng-template>
@@ -31,8 +31,8 @@
                 <app-input [type]="'email'" class="input-01 negative-margin" [placeholder]="'Repita o Email Cadastrado'"></app-input>
             </div>
             <div class="c-buttons">
-                <app-button [url]="'/'" [cancelButton]="true" [value]="'CANCELAR'"></app-button>
-                <app-button [cancelButton]="false" [value]="'CADASTRAR'"></app-button>
+                <app-button [url]="'/login'" [isCancelButton]="true" [value]="'CANCELAR'"></app-button>
+                <app-button [isSubmit]="true" [value]="'CADASTRAR'"></app-button>
             </div>
         </div>
     </ng-template>
