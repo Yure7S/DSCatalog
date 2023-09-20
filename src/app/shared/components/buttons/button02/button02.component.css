@@ -9,11 +9,12 @@ button{
     font-size: 14px;
 }
 
-.confirmation-button{
-
-}
-
-.cancel-button{
+.delete-button{
     color: #DF5753;
     border: 1px solid #DF5753;
 }
+
+button:hover{
+    cursor: pointer;
+}
+

@@ -15,3 +15,7 @@ button{
     border: 1px solid #DF5753;
 }
 
+button:hover{
+    cursor: pointer;
+}
+

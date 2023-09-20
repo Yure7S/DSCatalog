@@ -10,6 +10,7 @@ import { ProductDetailsComponent } from './features/product-details/product-deta
 import { MyProductsComponent } from './features/admin-control-panel/my-products/my-products.component';
 import { MyCategoriesComponent } from './features/admin-control-panel/my-categories/my-categories.component';
 import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
+import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'meus-produtos', component: MyProductsComponent },
       { path: 'minhas-categorias', component: MyCategoriesComponent },
       { path: 'meus-usuarios', component: MyUsersComponent },
+      { path: 'cadastrar-produto', component: RegisterProductComponent },
     ] 
   },
   { path: 'login', component: LoginComponent },

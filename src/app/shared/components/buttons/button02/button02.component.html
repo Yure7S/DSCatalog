@@ -1,1 +1,7 @@
-<button [ngClass]="classButton">{{value}}</button>
+<button *ngIf="buttonType === 1" type="submit">
+    {{value}}
+</button>
+
+<button *ngIf="buttonType === 2" type="submit" class="delete-button">
+    {{value}}
+</button>
