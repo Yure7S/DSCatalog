@@ -25,8 +25,8 @@ import { ProductCardAdminComponent } from './shared/components/product-card-admi
 import { Button02Component } from './shared/components/buttons/button02/button02.component';
 import { FormFilterComponent } from './shared/components/form-filter/form-filter.component';
 import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
-import { CategoryCard01Component } from './shared/components/category-card01/category-card01.component';
-import { CategoryCard02Component } from './shared/components/category-card02/category-card02.component';
+import { CardList01Component } from './shared/components/card-list01/card-list01.component';
+import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -53,8 +53,8 @@ import { CategoryCard02Component } from './shared/components/category-card02/cat
     Button02Component,
     FormFilterComponent,
     RegisterProductComponent,
-    CategoryCard01Component,
-    CategoryCard02Component
+    CardList01Component,
+    RegisterUserComponent,
     ],
   imports: [
     BrowserModule,

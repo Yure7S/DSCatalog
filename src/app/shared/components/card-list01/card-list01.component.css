@@ -1,0 +1,26 @@
+.c-category-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px #00000040;
+}
+
+.c-category-card h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.c-buttons{
+    display: flex;
+    width: 80%;
+    max-width: 450px;
+    gap: 30px;
+}
+
+.c-buttons *{
+    width: 50%;
+}

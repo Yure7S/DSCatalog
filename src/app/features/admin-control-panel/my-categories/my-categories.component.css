@@ -11,3 +11,9 @@
 .c-filter *:last-child{
     width: 100%;
 }
+
+.c-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

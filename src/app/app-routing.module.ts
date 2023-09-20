@@ -11,6 +11,7 @@ import { MyProductsComponent } from './features/admin-control-panel/my-products/
 import { MyCategoriesComponent } from './features/admin-control-panel/my-categories/my-categories.component';
 import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
 import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
+import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'minhas-categorias', component: MyCategoriesComponent },
       { path: 'meus-usuarios', component: MyUsersComponent },
       { path: 'cadastrar-produto', component: RegisterProductComponent },
+      { path: 'cadastrar-usuario', component: RegisterUserComponent },
     ] 
   },
   { path: 'login', component: LoginComponent },

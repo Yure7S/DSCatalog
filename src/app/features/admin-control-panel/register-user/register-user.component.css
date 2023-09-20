@@ -1,0 +1,53 @@
+.c-register-user{
+    width: 100%;
+    max-width: 1055px;
+    min-height: 780px;
+    padding: 50px 45px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0px auto;
+    position: relative;
+}
+
+.c-register-user h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.c-register-user form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.c-register-user span{
+    color: #407BFF;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    width: calc(50% - 15px);
+}
+
+.c-buttons{
+    display: flex;
+    width: 100%;
+    max-width: 540px;
+    gap: 30px;
+    position: absolute;
+    bottom: 50px;
+    right: 45px;
+}
+
+.c-buttons *{
+    width: 50%;
+}
+
+.box-input{
+    display: flex;
+    gap: 30px;
+}
+
+.box-input *{
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+<div class="c-register-user">
+    <h2>CADASTRAR UM USUÁRIO</h2>
+    <form action="">
+        <div class="box-input">
+            <app-input [type]="'text'" [placeholder]="'Nome'"></app-input>
+            <app-input [type]="'text'" [placeholder]="'Sobrenome'"></app-input>
+        </div>
+        <app-input [type]="'email'" [placeholder]="'Email'"></app-input>
+        <div class="box-input">
+            <app-input [type]="'password'" [placeholder]="'Digite a senha'"></app-input>
+            <app-input [type]="'password'" [placeholder]="'Repita aqui a senha'"></app-input>
+        </div>
+        <div class="c-buttons">
+            <app-button [buttonType]="3" [url]="'../meus-usuarios'" [value]="'CANCELAR'"></app-button>
+            <app-button [buttonType]="2" [value]="'CADASTRAR'"></app-button>
+        </div>
+    </form>
+    <span>A sua senha deve ter pelo menos 8 caracteres e conter pelo menos um número</span>
+</div>
