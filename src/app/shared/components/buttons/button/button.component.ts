@@ -6,8 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  @Input() isCancelButton?: boolean
-  @Input() isSubmit?: boolean
+  /* 
+    1 for default
+    2 for submit
+    3 to cancel
+  */
+  @Input() buttonType?: number
   @Input() value?: string
   @Input() url?: string
 }
