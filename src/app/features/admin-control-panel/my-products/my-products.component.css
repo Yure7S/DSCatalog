@@ -3,3 +3,17 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.c-filter{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.c-filter *:first-child{
+    min-width: 170px;
+}
+
+.c-filter *:last-child{
+    width: 100%;
+}
