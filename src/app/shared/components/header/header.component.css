@@ -2,6 +2,8 @@ header{
     background-color: #407BFF;
     display: flex;
     padding: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 header nav, 
@@ -10,6 +12,7 @@ header h1{
     font-size: 24px;
     width: 33.33%;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 header ul, 
@@ -35,5 +38,117 @@ header li a::after{
 
 header li a:hover::after{
     width: 100%;
+}
+
+header input[type="checkbox"]{
+    margin-right: -20px;
+    padding: 0px 10px;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    width: 45px;
+    height: 35px;
+    display: none;
+    opacity: 0;
+}
+
+header input[type="checkbox"]:checked ~ .menu-icon{
+    background-color: transparent;
+}
+
+header input[type="checkbox"]:checked ~ .menu-icon::before{
+    transform: rotate(45deg);
+    top: 0px;
+}
+
+header input[type="checkbox"]:checked ~ .menu-icon::after{
+    bottom: -10px;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+header .menu-icon,
+header .menu-icon::after,
+header .menu-icon::before{
+    background-color: white;
+    width: 25px;
+    height: 4px;
+    border-radius: 3px;
+    position: relative;
+    margin: auto 0px;
+    transition: 0.3s ease;
+    display: none;
+}
+
+header .menu-icon::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+}
+
+header .menu-icon::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    header nav, 
+    header h1{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header{
+        justify-content: space-between;
+    }
+
+    header input[type="checkbox"]{
+        display: block;
+    }
+
+    header input[type="checkbox"]:checked ~ nav{
+        top: 70px;
+    }
+    
+    header .menu-icon,
+    header .menu-icon::after,
+    header .menu-icon::before,
+    header input[type="checkbox"]:checked ~ .menu-icon::after{
+        display: block;
+    }
+
+    header nav{
+        position: absolute;
+        background-color: #407BFF;
+        top: -223.64px;
+        left: 0px;
+        width: 100%;
+        z-index: -10;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul *{
+        width: 100%;
+    }
+
+    header nav ul * a{
+        display: block;
+        font-size: 18px;
+        padding: 25px 30px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    header li a:hover::after{
+        width: 0%;
+    }
 }
 

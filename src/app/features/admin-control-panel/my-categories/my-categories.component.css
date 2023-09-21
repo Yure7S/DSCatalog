@@ -17,3 +17,10 @@
     flex-direction: column;
     gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .c-filter{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
