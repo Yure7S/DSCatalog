@@ -27,6 +27,7 @@ import { FormFilterComponent } from './shared/components/form-filter/form-filter
 import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
 import { CardList01Component } from './shared/components/card-list01/card-list01.component';
 import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { RegisterUserComponent } from './features/admin-control-panel/register-u
     RegisterProductComponent,
     CardList01Component,
     RegisterUserComponent,
+    NotFoundComponent,
     ],
   imports: [
     BrowserModule,

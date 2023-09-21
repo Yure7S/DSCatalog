@@ -2,6 +2,7 @@ header{
     background-color: #407BFF;
     display: flex;
     padding: 20px;
+    padding-right: 45px;
     position: relative;
     z-index: 10;
 }
@@ -95,15 +96,15 @@ header .menu-icon::before{
 @media screen and (max-width: 1024px) {
     header nav, 
     header h1{
-        width: 50%;
+        width: 45%;
     }
-}
-
-@media screen and (max-width: 600px) {
 
     header{
         justify-content: space-between;
     }
+}
+
+@media screen and (max-width: 600px) {
 
     header input[type="checkbox"]{
         display: block;

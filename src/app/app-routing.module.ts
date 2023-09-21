@@ -12,6 +12,7 @@ import { MyCategoriesComponent } from './features/admin-control-panel/my-categor
 import { MyUsersComponent } from './features/admin-control-panel/my-users/my-users.component';
 import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
 import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'cadastro', component: RegisterComponent },
   { path: 'recuperar', component: RecoverComponent },
   { path: 'product-details', component: ProductDetailsComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

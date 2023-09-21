@@ -1,0 +1,26 @@
+section{
+    min-width: 100vw;
+    min-height: calc(100vh - 65.25px - 72.32px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+svg{
+    width: 90vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0px auto;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    width: 90%;
+    max-width: 300px;
+    text-wrap: nowrap;
+}
