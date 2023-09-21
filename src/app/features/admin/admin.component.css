@@ -25,6 +25,18 @@
     transition: 0.3s ease;
 }
 
+.c-admin aside li:nth-child(1) a::before{
+    content: "Meus ";
+}
+
+.c-admin aside li:nth-child(2) a::before{
+    content: "Minhas ";
+}
+
+.c-admin aside li:nth-child(3) a::before{
+    content: "Meus ";
+}
+
 .c-admin aside a:hover{
     background-color: #f2f2f2;
     text-shadow: 0px 0px 10px white;
@@ -35,4 +47,49 @@
     padding: 40px 20px 40px;
     width: 100%;
     max-width: 1055px;
+}
+
+@media screen and (max-width: 1024px) {
+    .c-admin{
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    .c-admin aside{
+        position: inherit;
+        width: 100%;
+        padding: 30px 0px;
+    }
+
+    .c-admin aside ul{
+        display: flex;
+        width: 90%;
+        margin: 0px auto;
+        gap: 5%;
+    }
+
+    .c-admin aside a{
+        border-bottom: 0px;
+        border-radius: 100px;
+        padding: 17px 15px;
+        font-size: clamp(16px, 1em + 0.15vw, 18px);
+        background-color: #F2F2F2;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-admin aside ul li *::before{
+        content: "";
+    }
+
+    .c-admin aside a{
+        border-radius: 100px;
+        padding: 14px 10px;
+    }
+}
+
+@media screen and (max-width: 416px) {
+
+    
 }
