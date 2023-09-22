@@ -1,4 +1,4 @@
-a, .c-submit, input{
+button{
     background-color: #407BFF;
     border-radius: 10px;
     height: fit-content;
@@ -7,40 +7,33 @@ a, .c-submit, input{
     align-items: center;
     overflow: hidden;
     width: 100%;
-    position: relative;
 }
 
-a *,
-.c-submit svg,
-.c-submit input{
+button *{
     color: white;
     font-weight: 700;
     font-size: 24px;
     text-align: center;
     justify-content: center;
-    padding: 0px 30px;
+    padding: 20px 30px;
 }
 
-a span:nth-child(1), a button{
-    margin: 0px auto;
-    background-color: transparent;
-    padding: 20px 92px 20px 20px;
-    position: relative;
+button span{
+    width: 100%;
+    text-align: center;
 }
 
-a .arow, .c-submit span{
+button .arow{
     background-color: #2632387a;
-    height: 100%;
     display: flex;
     align-items: center;
-    position: absolute;
-    padding: 0px;
-    right: 0%;
+    padding: 25px 30px;
+
 }
 
-a span:last-child svg{
-    min-width: 10px;
-
+button .arow svg{
+    height: 100%;
+    padding: 0px;
 }
 
 /* Submit button */
@@ -49,8 +42,7 @@ a span:last-child svg{
     justify-content: right;
 }
 
-.c-submit input{
-    position: absolute;
+.c-submit button{
     background-color: transparent;
     padding: 0px 72px 0px 0px;
 }

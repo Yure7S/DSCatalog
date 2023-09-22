@@ -1,18 +1,18 @@
-<a *ngIf="!isSubmit; else submitButton" href="{{url}}">
-    <button>{{value}}</button>
-    <span *ngIf="arrow" class="arow">
+<button *ngIf="!isSubmit; else submitButton" routerLink="{{url}}">
+    <span>{{value}}</span>
+    <div *ngIf="arrow" class="arow">
         <svg height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L11 11L1 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg> 
-    </span>
-</a>
+    </div>
+</button>
 <ng-template #submitButton>
-    <div class="c-submit">
-        <input type="submit" value="{{value}}">
-        <span *ngIf="arrow" class="arow">
+    <button type="submit">
+        <span>{{value}}</span>
+        <div *ngIf="arrow" class="arow">
             <svg height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L11 11L1 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg> 
-        </span>
-    </div>
+        </div>
+    </button>
 </ng-template>

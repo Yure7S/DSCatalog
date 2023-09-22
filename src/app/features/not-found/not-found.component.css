@@ -7,20 +7,23 @@ section{
     justify-content: center;
 }
 
-svg{
-    width: 90vw;
-    max-width: 500px;
-    max-height: 500px;
-    margin: 0px auto;
+h2{
+    color: #9E9E9E;
+    font-weight: bold;
+    font-size: clamp(0px, 90vw, 200px);
 }
 
-a{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-weight: bold;
-    font-size: 24px;
-    width: 90%;
+p{
+    color: #9E9E9E;
+    font-size: 18px; 
+    text-align: center;   
+}
+
+p:last-child{
     max-width: 300px;
-    text-wrap: nowrap;
+}
+
+.c-buttons{
+    width: 100%;
+    max-width: 200px;
 }
