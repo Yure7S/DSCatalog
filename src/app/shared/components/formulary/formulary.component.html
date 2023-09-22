@@ -1,4 +1,4 @@
-<form action="">
+<form (ngSugmit)="submit()" >
     <div *ngIf="formType == 1; else register" class="content">
         <h3>LOGIN</h3>
         <app-input class="input-01" [type]="'email'" [placeholder]="'Email'"></app-input>

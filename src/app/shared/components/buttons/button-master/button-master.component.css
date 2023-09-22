@@ -36,6 +36,10 @@ button .arow svg{
     padding: 0px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 /* Submit button */
 .c-submit{
     position: relative;

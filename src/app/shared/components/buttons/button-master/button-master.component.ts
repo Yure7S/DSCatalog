@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-button-master',
@@ -10,6 +11,7 @@ export class ButtonMasterComponent {
   @Input() arrow?: boolean
   @Input() url?: string
   @Input() isSubmit?: boolean
+
 
   constructor() {
     

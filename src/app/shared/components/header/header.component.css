@@ -33,8 +33,9 @@ header li a::after{
     height: 2px;
     width: 0%;
     background-color: white;
-    top: 22px;
+    top: 40px;
     transition: 0.3s ease;
+    margin: 0px auto;
 }
 
 header li a:hover::after{
