@@ -1,14 +1,15 @@
 .c-admin{
     display: flex;
-    padding-left: 300px;
 }
 
 .c-admin aside{
-    position: fixed;
-    left: 0px;
-    height: 100%;
+    min-height: 100%;
     width: 300px;
     background-color: white;
+}
+
+.c-admin ul{
+    height: 100%;
 }
 
 .c-admin aside *{

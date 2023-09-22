@@ -49,9 +49,7 @@ button .arow svg{
 
 @media screen and (max-width: 416px) {
 
-    a *,
-    .c-submit svg,
-    .c-submit input{
+    button *{
         font-size: 16px;
         padding: 0px 20px;
     }
