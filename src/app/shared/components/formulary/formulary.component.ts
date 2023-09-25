@@ -9,16 +9,29 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class FormularyComponent {
   @Input() formType?: number
 
-  loginForm?: FormGroup
+  // loginForm?: FormGroup
 
-  public submit() {
-    console.log("Esecutando método submit")
-  }
+  // public submit() {
+  //   console.log("Esecutando método submit")
+  // }
 
-  ngOninit(){
-    this.loginForm = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
-    })
+  // ngOninit(){
+  //   this.loginForm = new FormGroup({
+  //     email: new FormControl(''),
+  //     password: new FormControl(''),
+  //   })
+  // }
+
+  profileForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
+
+
+  /**
+   * onSubmit
+   */
+  public onSubmit() {
+    console.log(this.profileForm.value)
   }
 }
