@@ -9,20 +9,35 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormularyComponent {
   @Input() formType?: number
 
-  profileForm!: FormGroup
+  loginForm!: FormGroup
+  registerForm!: FormGroup
+  recoverForm!: FormGroup
 
   ngOnInit(){
     this.createForm()
   }
   
-  public createForm() {
-    this.profileForm = new FormGroup({
+  private createForm() {
+    this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
     });
+
+    this.registerForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      surname: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
+      repeatPassword: new FormControl('', [Validators.required])
+    });
+
+    this.recoverForm = new FormGroup({
+      email: new FormControl('', [Validators.required]),
+      repeatEmail: new FormControl('', [Validators.required])
+    });
   }
 
-  public onSubmit() {
-    console.log(this.profileForm.value)
+  public onSubmit(value: object) {
+    console.log(value)
   }
 }

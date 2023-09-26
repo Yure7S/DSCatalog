@@ -1,45 +1,74 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" #formDir="ngForm"> 
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" #formDir="ngForm">
     <div *ngIf="formType == 1; else register" class="content">
         <h3>LOGIN</h3>
-        <div *ngIf="profileForm.get('email')?.errors && formDir.submitted" class="error">
-            <span *ngIf="profileForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
+        <div *ngIf="loginForm.get('email')?.errors && formDir.submitted" class="error">
+            <span *ngIf="loginForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
         </div>
         <app-input 
             class="input-01" 
             id="email" 
             [type]="'email'" 
             [placeholder]="'Email'" 
-            [control]="$any(profileForm.get('email'))"
+            [control]="$any(loginForm.get('email'))"
         ></app-input>
-        <div *ngIf="profileForm.get('password')?.errors && formDir.submitted" class="error">
-            <span *ngIf="profileForm.get('password')?.errors?.['required']">* A senha é obrigatória!</span>
+        <div *ngIf="loginForm.get('password')?.errors && formDir.submitted" class="error">
+            <span *ngIf="loginForm.get('password')?.errors?.['required']">* A senha é obrigatória!</span>
         </div>
         <app-input 
             class="input-01" 
             [type]="'password'" 
             [placeholder]="'Senha'" 
-            [control]="$any(profileForm.get('password'))"
+            [control]="$any(loginForm.get('password'))"
         ></app-input>
         <a class="forgot-password" routerLink="/recuperar">Esqueceu a senha?</a>
         <app-button-master class="button-master-01" [isSubmit]="true" [value]="'LOGAR'" [arrow]="true"></app-button-master>
         <p>Não tem Cadastro? <a routerLink="/cadastro">CADASTRAR</a></p>
     </div>
-    <ng-template #register>
+</form>
+<ng-template #register>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" #formDir="ngForm">
         <div *ngIf="formType == 2; else forgotPassword" class="content">
             <h3>CADASTRO</h3>
-            <app-input [type]="'text'" class="input-01" [placeholder]="'Nome'"></app-input>
-            <app-input [type]="'text'" class="input-01" [placeholder]="'Sobrenome'"></app-input>
-            <app-input [type]="'email'" class="input-01" [placeholder]="'Email'"></app-input>
-            <app-input [type]="'password'" class="input-01" [placeholder]="'Digite aqui a senha'"></app-input>
+            <app-input 
+                [type]="'text'" 
+                class="input-01" 
+                [placeholder]="'Nome'"
+                [control]="$any(registerForm.get('name'))"
+            ></app-input>
+            <app-input 
+                [type]="'text'" 
+                class="input-01" 
+                [placeholder]="'Sobrenome'"
+                [control]="$any(registerForm.get('surname'))"
+            ></app-input>
+            <app-input 
+                [type]="'email'" 
+                class="input-01" 
+                [placeholder]="'Email'"
+                [control]="$any(registerForm.get('email'))"
+                ></app-input>
+            <app-input 
+                [type]="'password'" 
+                class="input-01" 
+                [placeholder]="'Digite aqui a senha'"
+                [control]="$any(registerForm.get('password'))"
+            ></app-input>
             <span>A sua senha deve ter pelo menos 8 caracteres e conter pelo menos um número</span>
-            <app-input [type]="'password'" class="input-01" [placeholder]="'Repita aqui a senha'"></app-input>
+            <app-input 
+                [type]="'password'" 
+                class="input-01" 
+                [placeholder]="'Repita aqui a senha'"
+                [control]="$any(registerForm.get('repeatPassword'))"
+            ></app-input>
             <div class="c-buttons">
                 <app-button [url]="'/login'" [buttonType]="3" [value]="'CANCELAR'"></app-button>
                 <app-button [buttonType]="2" [value]="'CADASTRAR'"></app-button>
             </div>
         </div>
-    </ng-template>
-    <ng-template #forgotPassword>
+    </form>
+</ng-template>
+<ng-template #forgotPassword>
+    <form [formGroup]="recoverForm" (ngSubmit)="onSubmit(recoverForm.value)" #formDir="ngForm">
         <div class="content">
             <h3>RECUPERAÇÃO</h3>
             <div class="c-inputs">
@@ -51,5 +80,5 @@
                 <app-button [buttonType]="2" [value]="'ENVIAR'"></app-button>
             </div>
         </div>
-    </ng-template>
-</form>
+    </form>
+</ng-template>
