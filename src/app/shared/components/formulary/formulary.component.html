@@ -1,8 +1,8 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" > 
     <div *ngIf="formType == 1; else register" class="content">
         <h3>LOGIN</h3>
-        <app-input class="input-01" id="email" [type]="'email'" [placeholder]="'Email'" [formControlNameValue]=""></app-input>
-        <app-input class="input-01" [type]="'password'" [placeholder]="'Senha'"></app-input>
+        <app-input class="input-01" id="email" [type]="'email'" [placeholder]="'Email'" [control]="$any(profileForm.get('email'))"></app-input>
+        <app-input class="input-01" [type]="'password'" [placeholder]="'Senha'" [control]="$any(profileForm.get('password'))"></app-input>
         <a class="forgot-password" routerLink="/recuperar">Esqueceu a senha?</a>
         <app-button-master class="button-master-01" [isSubmit]="true" [value]="'LOGAR'" [arrow]="true"></app-button-master>
         <p>Não tem Cadastro? <a routerLink="/cadastro">CADASTRAR</a></p>

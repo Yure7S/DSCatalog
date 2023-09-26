@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,13 +7,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
+  
   @Input() type?: string
   @Input() placeholder?: string
   @Input() required?: boolean
   @Input() value?: string
-  @Input() formControlNameValue: FormControl = new FormControl()
+  @Input() control!: FormControl
 
-  constructor() {
-
-  }
 }
