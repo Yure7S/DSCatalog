@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulary',
@@ -17,8 +17,8 @@ export class FormularyComponent {
   
   public createForm() {
     this.profileForm = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl('')
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
     });
   }
 
