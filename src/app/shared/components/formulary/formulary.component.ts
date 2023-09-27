@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class FormularyComponent {
   @Input() formType?: number
+  @Output() submitData: EventEmitter<any> = new EventEmitter()
 
   loginForm!: FormGroup
   registerForm!: FormGroup
@@ -39,11 +40,10 @@ export class FormularyComponent {
 
   public onSubmit(form: FormGroup, value: object) {
 
-    if(!form.valid){
+    if(form.invalid){
       console.log("O formulário não é válido")
       return
     }
-    
-    console.log(value)
+    this.submitData.emit(value)
   }
 }

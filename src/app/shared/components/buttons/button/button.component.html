@@ -1,4 +1,4 @@
-<button *ngIf="buttonType === 1" routerLink="{{url}}">
+<button type="button" *ngIf="buttonType === 1" routerLink="{{url}}">
     {{value}}
 </button>
 
@@ -6,6 +6,6 @@
     {{value}}
 </button>
 
-<button *ngIf="buttonType === 3" [routerLink]="[url]" class="cancel-button">
+<button type="button" *ngIf="buttonType === 3" [routerLink]="[url]" class="cancel-button">
     {{value}}
 </button>

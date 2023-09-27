@@ -2,7 +2,7 @@
     <div class="container">
         <div class="c-login">
             <app-emphasis-login></app-emphasis-login>
-            <app-formulary [formType]="1" class="login-formulary-01"></app-formulary>
+            <app-formulary (submitData)="loginHandler($event)" [formType]="1" class="login-formulary-01"></app-formulary>
         </div>
     </div>
 </section>
