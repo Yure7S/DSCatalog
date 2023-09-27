@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" #formDir="ngForm">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm, loginForm.value)" #formDir="ngForm">
     <div *ngIf="formType == 1; else register" class="content">
         <h3>LOGIN</h3>
         <div *ngIf="loginForm.get('email')?.errors && formDir.submitted" class="error">
@@ -26,7 +26,7 @@
     </div>
 </form>
 <ng-template #register>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" #formDir="ngForm">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm, registerForm.value)" #formDir="ngForm">
         <div *ngIf="formType == 2; else forgotPassword" class="content">
             <h3>CADASTRO</h3>
             <div *ngIf="registerForm.get('name')?.errors && formDir.submitted" class="error">
@@ -39,7 +39,7 @@
                 [control]="$any(registerForm.get('name'))"
             ></app-input>
             <div *ngIf="registerForm.get('surname')?.errors && formDir.submitted" class="error">
-                <span *ngIf="registerForm.get('surname')?.errors?.['required']">* Seu sobrenome é obrigatória!</span>
+                <span *ngIf="registerForm.get('surname')?.errors?.['required']">* Seu sobrenome é obrigatório!</span>
             </div>
             <app-input 
                 [type]="'text'" 
@@ -49,6 +49,7 @@
             ></app-input>
             <div *ngIf="registerForm.get('email')?.errors && formDir.submitted" class="error">
                 <span *ngIf="registerForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
+                <span *ngIf="registerForm.get('email')?.errors?.['email']">* Por favor, insira um endeço de email válido!</span>
             </div>
             <app-input 
                 [type]="'email'" 
@@ -58,6 +59,7 @@
             ></app-input>
             <div *ngIf="registerForm.get('password')?.errors && formDir.submitted" class="error">
                 <span *ngIf="registerForm.get('password')?.errors?.['required']">* A senha é obrigatória!</span>
+                <span *ngIf="registerForm.get('password')?.errors?.['minlength']">* A senha deve conter no mínimo 8 caracteres!</span>
             </div>
             <app-input 
                 [type]="'password'" 
@@ -83,7 +85,7 @@
     </form>
 </ng-template>
 <ng-template #forgotPassword>
-    <form [formGroup]="recoverForm" (ngSubmit)="onSubmit(recoverForm.value)" #formDir="ngForm">
+    <form [formGroup]="recoverForm" (ngSubmit)="onSubmit(recoverForm, recoverForm.value)" #formDir="ngForm">
         <div class="content">
             <h3>RECUPERAÇÃO</h3>
             <div class="c-inputs">
