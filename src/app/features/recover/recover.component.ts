@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class RecoverComponent {
 
+  public loginHandler(data: object) {
+    console.log("Recebendo evento")
+    console.log(data)
+  }
 }

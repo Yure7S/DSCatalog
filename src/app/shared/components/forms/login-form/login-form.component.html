@@ -1,0 +1,27 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm, loginForm.value)" #formDir="ngForm">
+    <div class="content">
+        <h3>LOGIN</h3>
+        <div *ngIf="loginForm.get('email')?.errors && formDir.submitted" class="error">
+            <span *ngIf="loginForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
+        </div>
+        <app-input 
+            class="input-01" 
+            id="email" 
+            [type]="'email'" 
+            [placeholder]="'Email'" 
+            [control]="$any(loginForm.get('email'))"
+        ></app-input>
+        <div *ngIf="loginForm.get('password')?.errors && formDir.submitted" class="error">
+            <span *ngIf="loginForm.get('password')?.errors?.['required']">* A senha é obrigatória!</span>
+        </div>
+        <app-input 
+            class="input-01" 
+            [type]="'password'" 
+            [placeholder]="'Senha'" 
+            [control]="$any(loginForm.get('password'))"
+        ></app-input>
+        <a class="forgot-password" routerLink="/recuperar">Esqueceu a senha?</a>
+        <app-button-master class="button-master-01" [isSubmit]="true" [value]="'LOGAR'" [arrow]="true"></app-button-master>
+        <p>Não tem Cadastro? <a routerLink="/cadastro">CADASTRAR</a></p>
+    </div>
+</form>

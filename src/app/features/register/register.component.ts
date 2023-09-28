@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
+  public loginHandler(data: object) {
+    console.log("Recebendo evento")
+    console.log(data)
+  }
 }

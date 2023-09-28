@@ -13,7 +13,6 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
 import { InputComponent } from './shared/components/input/input.component';
 import { LoginComponent } from './features/login/login.component';
 import { RegisterComponent } from './features/register/register.component';
-import { FormularyComponent } from './shared/components/formulary/formulary.component';
 import { RecoverComponent } from './features/recover/recover.component';
 import { ButtonComponent } from './shared/components/buttons/button/button.component';
 import { EmphasisLoginComponent } from './shared/components/emphasis-login/emphasis-login.component';
@@ -29,6 +28,9 @@ import { RegisterProductComponent } from './features/admin-control-panel/registe
 import { CardList01Component } from './shared/components/card-list01/card-list01.component';
 import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { LoginFormComponent } from './shared/components/forms/login-form/login-form.component';
+import { RegisterFormComponent } from './shared/components/forms/register-form/register-form.component';
+import { RecoverFormComponent } from './shared/components/forms/recover-form/recover-form.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,6 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
     InputComponent,
     LoginComponent,
     RegisterComponent,
-    FormularyComponent,
     RecoverComponent,
     ButtonComponent,
     EmphasisLoginComponent,
@@ -58,6 +59,9 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
     CardList01Component,
     RegisterUserComponent,
     NotFoundComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
+    RecoverFormComponent,
     
     ],
   imports: [

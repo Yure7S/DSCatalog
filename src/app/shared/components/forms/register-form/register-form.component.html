@@ -1,0 +1,57 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm, registerForm.value)" #formDir="ngForm">
+    <div class="content">
+        <h3>CADASTRO</h3>
+        <div *ngIf="registerForm.get('name')?.errors && formDir.submitted" class="error">
+            <span *ngIf="registerForm.get('name')?.errors?.['required']">* Seu nome é obrigatório!</span>
+        </div>
+        <app-input 
+            [type]="'text'" 
+            class="input-01" 
+            [placeholder]="'Nome'"
+            [control]="$any(registerForm.get('name'))"
+        ></app-input>
+        <div *ngIf="registerForm.get('surname')?.errors && formDir.submitted" class="error">
+            <span *ngIf="registerForm.get('surname')?.errors?.['required']">* Seu sobrenome é obrigatório!</span>
+        </div>
+        <app-input 
+            [type]="'text'" 
+            class="input-01" 
+            [placeholder]="'Sobrenome'"
+            [control]="$any(registerForm.get('surname'))"
+        ></app-input>
+        <div *ngIf="registerForm.get('email')?.errors && formDir.submitted" class="error">
+            <span *ngIf="registerForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
+            <span *ngIf="registerForm.get('email')?.errors?.['email']">* Por favor, insira um endeço de email válido!</span>
+        </div>
+        <app-input 
+            [type]="'email'" 
+            class="input-01" 
+            [placeholder]="'Email'"
+            [control]="$any(registerForm.get('email'))"
+        ></app-input>
+        <div *ngIf="registerForm.get('password')?.errors && formDir.submitted" class="error">
+            <span *ngIf="registerForm.get('password')?.errors?.['required']">* A senha é obrigatória!</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['minlength']">* A senha deve conter no mínimo 8 caracteres!</span>
+        </div>
+        <app-input 
+            [type]="'password'" 
+            class="input-01" 
+            [placeholder]="'Digite aqui a senha'"
+            [control]="$any(registerForm.get('password'))"
+        ></app-input>
+        <span>A sua senha deve ter pelo menos 8 caracteres e conter pelo menos um número</span>
+        <div *ngIf="registerForm.get('repeatPassword')?.errors && formDir.submitted" class="error">
+            <span *ngIf="registerForm.get('repeatPassword')?.errors?.['required']">* Repita a senha por favor.</span>
+        </div>
+        <app-input 
+            [type]="'password'" 
+            class="input-01" 
+            [placeholder]="'Repita aqui a senha'"
+            [control]="$any(registerForm.get('repeatPassword'))"
+        ></app-input>
+        <div class="c-buttons">
+            <app-button [url]="'/login'" [buttonType]="3" [value]="'CANCELAR'"></app-button>
+            <app-button [buttonType]="2" [value]="'CADASTRAR'"></app-button>
+        </div>
+    </div>
+</form>

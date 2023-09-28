@@ -1,0 +1,29 @@
+<form [formGroup]="recoverForm" (ngSubmit)="onSubmit(recoverForm, recoverForm.value)" #formDir="ngForm">
+    <div class="content">
+        <h3>RECUPERAÇÃO</h3>
+        <div class="c-inputs">
+            <div *ngIf="recoverForm.get('email')?.errors && formDir.submitted" class="error">
+                <span *ngIf="recoverForm.get('email')?.errors?.['required']">* O email é obrigatório!</span>
+            </div>
+            <app-input 
+                [type]="'email'" 
+                class="input-01 negative-margin" 
+                [placeholder]="'Digite o Email Cadastrado'"
+                [control]="$any(recoverForm.get('email'))"
+            ></app-input>
+            <div *ngIf="recoverForm.get('repeatEmail')?.errors && formDir.submitted" class="error">
+                <span *ngIf="recoverForm.get('repeatEmail')?.errors?.['required']">* Repita o email por favor.</span>
+            </div>
+            <app-input 
+                [type]="'email'" 
+                class="input-01 negative-margin" 
+                [placeholder]="'Repita o Email Cadastrado'"
+                [control]="$any(recoverForm.get('repeatEmail'))"
+            ></app-input>
+        </div>
+        <div class="c-buttons">
+            <app-button [url]="'/login'" [buttonType]="3" [value]="'CANCELAR'"></app-button>
+            <app-button [buttonType]="2" [value]="'ENVIAR'"></app-button>
+        </div>
+    </div>
+</form>

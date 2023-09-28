@@ -1,0 +1,79 @@
+.content{
+    max-width: 550px;
+    padding: 90px 50px 0px;
+    min-height: 780px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20PX;
+    box-shadow: 0px 4px 20px 0px #00000040;
+    position: relative;
+}
+
+form h3{
+    font-size: clamp(24px, 1em + 2.8vw, 48px);
+    position: absolute;
+    top: 90px;
+    margin-bottom: 30px;
+}
+
+form .input-01,
+form .button-master-01{
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+form .forgot-password,
+form span{
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    margin: -20px 0px 20px;
+    color: #407BFF;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+form .button-master-01{
+    margin-top: 100px;
+}
+
+form a{
+    text-decoration: underline;
+    color: #407BFF;
+    font-weight: bold;
+}
+
+form p{
+    font-weight: bold;
+    color: #9E9E9E;
+}
+
+/* Alert Error */
+.error{
+    width: 100%;
+    margin-top: -25px;
+    margin-bottom: 3px;
+}
+
+.error *{
+    color: #DF5753;
+
+}
+
+@media screen and (max-width: 414px){
+    .content{
+        padding: 90px 20px 100px;
+        min-height: 800px;
+    }
+
+    form .input-01,
+    form .button-master-01{
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }   
+}
