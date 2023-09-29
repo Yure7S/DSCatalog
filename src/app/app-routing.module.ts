@@ -13,11 +13,15 @@ import { MyUsersComponent } from './features/admin-control-panel/my-users/my-use
 import { RegisterProductComponent } from './features/admin-control-panel/register-product/register-product.component';
 import { RegisterUserComponent } from './features/admin-control-panel/register-user/register-user.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { authGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'catalog', component: CatalogComponent },
-  { path: 'admin', component: AdminComponent, title: "Admin Panel",
+  { path: 'admin', 
+  component: AdminComponent, 
+    title: "Admin Panel", 
+    canActivate: [authGuard], 
     children: [
       { path: 'meus-produtos', component: MyProductsComponent },
       { path: 'minhas-categorias', component: MyCategoriesComponent },
