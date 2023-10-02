@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CurrentUserServiceService } from './shared/services/current-user-service.service';
 
 
 @Component({
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DSCatalog';
+  currentUser = inject(CurrentUserServiceService)
+
+  ngOnInit(){
+    this.currentUser.setCurrentUser()
+  }
 }
