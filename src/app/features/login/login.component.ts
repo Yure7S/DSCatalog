@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   
-  public loginHandler(data: object) {
+  public loginHandler(data: object) { 
     console.log("Recebendo evento")
     console.log(data)
   }
