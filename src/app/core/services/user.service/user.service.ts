@@ -17,14 +17,12 @@ export class UserService {
 
   options = {
     headers: new HttpHeaders({
-      'content-type': 'application/json',
-      'Authorization': `Bearer ${this.currentUserService.currentUser$.value?.token}`,
-      'Access-Control-Allow-Origin': '*'
+      'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJyb2xlcyI6WyJST0xFX09QRVJBVE9SIiwiUk9MRV9BRE1JTiJdLCJpc3MiOiJjb20uZHNjYXRhbG9nIiwiaWQiOjIsImV4cCI6MTY5NjYxNzc4NH0.ajpZEz6cllacXkHrDHAYczv6MPlfEJ4FOkh_7Yt9dFg`,
     })
   }
  
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.api}/users`, this.options);
+    return this.http.get<User[]>(`/v1/users`, this.options);
   }
 
   getById(id: string): Observable<User[]> {

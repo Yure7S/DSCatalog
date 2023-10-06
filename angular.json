@@ -69,7 +69,8 @@
               "browserTarget": "DSCatalog:build:production"
             },
             "development": {
-              "browserTarget": "DSCatalog:build:development"
+              "browserTarget": "DSCatalog:build:development",
+              "proxyConfig": "src/app/shared/utils/proxy.config.ts"
             }
           },
           "defaultConfiguration": "development"
