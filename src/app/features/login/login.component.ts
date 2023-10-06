@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Login } from 'src/app/core/models/auth.models/login';
+import { AuthenticationService } from 'src/app/core/services/authentication.service/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -6,9 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  authenticationService = inject(AuthenticationService)
   
-  public loginHandler(data: object) { 
-    console.log("Recebendo evento")
-    console.log(data)
+  public loginHandler(data: Login) { 
+    this.authenticationService.Login(data)
   }
 }

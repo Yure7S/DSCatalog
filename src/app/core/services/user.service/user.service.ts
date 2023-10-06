@@ -13,11 +13,10 @@ export class UserService {
   constructor() { }
   http = inject(HttpClient)
   currentUserService = inject(CurrentUserServiceService)
-  api: string = environment.apiUrl
 
   options = {
     headers: new HttpHeaders({
-      'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJyb2xlcyI6WyJST0xFX09QRVJBVE9SIiwiUk9MRV9BRE1JTiJdLCJpc3MiOiJjb20uZHNjYXRhbG9nIiwiaWQiOjIsImV4cCI6MTY5NjYxNzc4NH0.ajpZEz6cllacXkHrDHAYczv6MPlfEJ4FOkh_7Yt9dFg`,
+      'Authorization': `Bearer ${this.currentUserService.currentUser$.value?.token}`,
     })
   }
  
@@ -26,18 +25,18 @@ export class UserService {
   }
 
   getById(id: string): Observable<User[]> {
-    return this.http.get<User[]>(`${this.api}/users/${id}`);
+    return this.http.get<User[]>(`/v1/users${id}`, this.options);
   }
  
   update(user: User, id: string): Observable<User[]> {
-    return this.http.put<User[]>(`${this.api}/users/${id}`, user);
+    return this.http.put<User[]>(`/v1/users${id}`, user, this.options);
   }
 
   create(user: User): Observable<User[]> {
-    return this.http.post<User[]>(`${this.api}/users`, user);
+    return this.http.post<User[]>(`/v1/users`, user, this.options);
   }
 
   delete(id: string): Observable<User[]> {
-    return this.http.delete<User[]>(`${this.api}/users/${id}`);
+    return this.http.delete<User[]>(`/v1/users${id}`, this.options);
   }
 }
