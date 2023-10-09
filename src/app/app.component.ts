@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from './core/services/user.service/user.service';
-import { CurrentUserServiceService } from './shared/services/current-user.service/current-user-service.service';
+import { AuthenticationService } from './core/services/authentication.service/authentication.service';
 
 
 @Component({
@@ -9,12 +9,9 @@ import { CurrentUserServiceService } from './shared/services/current-user.servic
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentUserService = inject(CurrentUserServiceService)
-  userService = inject(UserService)
+  authenticationService = inject(AuthenticationService)
 
   ngOnInit(){
-    this.currentUserService.setCurrentUser()
-    console.log(this.currentUserService.currentUser$.value?.token)
-    this.userService.getAll().subscribe(e => console.log(e))
+    this.authenticationService.SetCurrentUser()
   }
 }

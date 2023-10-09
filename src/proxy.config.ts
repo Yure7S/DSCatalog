@@ -1,11 +1,9 @@
-import { environment } from "./environments/environment.development"
-
 const PROXY_CONFIG = [
     {
         context: [
             "/v1"
         ],
-        target: environment.apiUrl,
+        target: "http://localhost:8080",
         secure: false,
         changeOrigin: true,
         pathRewrite: {

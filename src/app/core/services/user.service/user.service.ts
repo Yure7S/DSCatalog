@@ -3,7 +3,8 @@ import { Injectable, inject } from '@angular/core';
 import { User } from '../../models/user.models/user';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { CurrentUserServiceService } from 'src/app/shared/services/current-user.service/current-user-service.service';
+import { AuthenticationService } from '../authentication.service/authentication.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,11 @@ export class UserService {
 
   constructor() { }
   http = inject(HttpClient)
-  currentUserService = inject(CurrentUserServiceService)
+  authenticationService = inject(AuthenticationService)
 
   options = {
     headers: new HttpHeaders({
-      'Authorization': `Bearer ${this.currentUserService.currentUser$.value?.token}`,
+      'Authorization': `Bearer ${this.authenticationService.currentUser$.value?.token}`,
     })
   }
  

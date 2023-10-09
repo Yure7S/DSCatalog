@@ -1,10 +1,9 @@
 import { Injectable, inject } from '@angular/core';
 import { Login } from '../../models/auth.models/login';
-import { UserService } from '../user.service/user.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CurrentUserServiceService } from 'src/app/shared/services/current-user.service/current-user-service.service';
+import { HttpClient } from '@angular/common/http';
 import { loggedUser } from '../../models/auth.models/loggedUser';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,18 +11,40 @@ import { BehaviorSubject } from 'rxjs';
 export class AuthenticationService {
 
   http = inject(HttpClient)
-  token$ = new BehaviorSubject<string | undefined>(undefined)
+  router = inject(Router)
   currentUser$ = new BehaviorSubject<loggedUser | undefined>(undefined)
   
   public Login(loginFormData: Login) {
     this.http.post<loggedUser>(`/v1/auth/signin`, loginFormData).subscribe(e => {
-      console.log(e)
-      localStorage.setItem('token', e.token)
-      this.token$.next(e.token)
+      this.router.navigate(["/"])
+      
+      const user: loggedUser = new loggedUser(
+        e.id,
+        e.token,
+        e.type,
+        e.username,
+        e.email,
+        e.roles
+      )
+      
+      localStorage.setItem('currentUser', JSON.stringify(user))
+      this.currentUser$.next(user) 
     });
   }
 
   public Logout() {
-    
+    localStorage.removeItem("currentUser")
+    this.currentUser$.next(undefined)
+    this.router.navigate(["/"])
+  }
+
+  public SetCurrentUser() {
+
+    if(localStorage.getItem('currentUser')){
+      const currentUser = JSON.parse(localStorage.getItem('currentUser')!)
+      this.currentUser$.next(currentUser)
+    } else{
+      this.currentUser$.next(undefined)
+    }
   }
 }
