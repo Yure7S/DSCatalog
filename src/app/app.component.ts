@@ -10,8 +10,10 @@ import { AuthenticationService } from './core/services/authentication.service/au
 })
 export class AppComponent {
   authenticationService = inject(AuthenticationService)
+  userService = inject(UserService)
 
   ngOnInit(){
     this.authenticationService.SetCurrentUser()
+    this.userService.getAll().subscribe(e => console.log(e))
   }
 }

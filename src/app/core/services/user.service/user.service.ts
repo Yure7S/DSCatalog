@@ -14,30 +14,24 @@ export class UserService {
   constructor() { }
   http = inject(HttpClient)
   authenticationService = inject(AuthenticationService)
-
-  options = {
-    headers: new HttpHeaders({
-      'Authorization': `Bearer ${this.authenticationService.currentUser$.value?.token}`,
-    })
-  }
  
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(`/v1/users`, this.options);
+    return this.http.get<User[]>(`/v1/users`);
   }
 
   getById(id: string): Observable<User[]> {
-    return this.http.get<User[]>(`/v1/users${id}`, this.options);
+    return this.http.get<User[]>(`/v1/users${id}`);
   }
  
   update(user: User, id: string): Observable<User[]> {
-    return this.http.put<User[]>(`/v1/users${id}`, user, this.options);
+    return this.http.put<User[]>(`/v1/users${id}`, user);
   }
 
   create(user: User): Observable<User[]> {
-    return this.http.post<User[]>(`/v1/users`, user, this.options);
+    return this.http.post<User[]>(`/v1/users`, user);
   }
 
   delete(id: string): Observable<User[]> {
-    return this.http.delete<User[]>(`/v1/users${id}`, this.options);
+    return this.http.delete<User[]>(`/v1/users${id}`);
   }
 }

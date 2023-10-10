@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http"
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +32,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
 import { LoginFormComponent } from './shared/components/forms/login-form/login-form.component';
 import { RegisterFormComponent } from './shared/components/forms/register-form/register-form.component';
 import { RecoverFormComponent } from './shared/components/forms/recover-form/recover-form.component';
+import { AuthInterceptor } from './core/guard/interceptor/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,13 @@ import { RecoverFormComponent } from './shared/components/forms/recover-form/rec
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

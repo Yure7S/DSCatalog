@@ -12,7 +12,13 @@ export class AuthenticationService {
 
   http = inject(HttpClient)
   router = inject(Router)
+
   currentUser$ = new BehaviorSubject<loggedUser | undefined>(undefined)
+
+  
+  public GetToken() {
+    return this.currentUser$.value?.token
+  }
   
   public Login(loginFormData: Login) {
     this.http.post<loggedUser>(`/v1/auth/signin`, loginFormData).subscribe(e => {
@@ -39,7 +45,6 @@ export class AuthenticationService {
   }
 
   public SetCurrentUser() {
-
     if(localStorage.getItem('currentUser')){
       const currentUser = JSON.parse(localStorage.getItem('currentUser')!)
       this.currentUser$.next(currentUser)
