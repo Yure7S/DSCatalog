@@ -74,11 +74,11 @@ import { AuthInterceptor } from './core/guard/interceptor/auth.interceptor';
     HttpClientModule
   ],
   providers: [
-    {
+    /* {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    } */
   ],
   bootstrap: [AppComponent]
 })
