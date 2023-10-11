@@ -4,9 +4,10 @@ import {
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
-  HttpHeaders
+  HttpHeaders,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { AuthenticationService } from '../../services/authentication.service/authentication.service';
 
 @Injectable()
@@ -17,7 +18,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const token = this.authenticationService.GetToken()
-    console.log(token)
+    console.log(request.url)
     if(token){
       const options = {
         headers: new HttpHeaders({
@@ -25,7 +26,7 @@ export class AuthInterceptor implements HttpInterceptor {
         })
       }
       const clone = request.clone(options)
-      return next.handle(clone);
+      return next.handle(clone)
     }
 
     return next.handle(request);
