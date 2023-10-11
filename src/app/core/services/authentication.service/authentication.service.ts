@@ -15,7 +15,6 @@ export class AuthenticationService {
 
   currentUser$ = new BehaviorSubject<loggedUser | undefined>(undefined)
 
-  
   public GetToken() {
     return this.currentUser$.value?.token
   }
@@ -33,7 +32,7 @@ export class AuthenticationService {
         e.roles
       )
       
-      localStorage.setItem('currentUser', JSON.stringify(user))
+      localStorage.setItem('currentUser', btoa(JSON.stringify(user)))
       this.currentUser$.next(user) 
     });
   }
@@ -46,7 +45,7 @@ export class AuthenticationService {
 
   public SetCurrentUser() {
     if(localStorage.getItem('currentUser')){
-      const currentUser = JSON.parse(localStorage.getItem('currentUser')!)
+      const currentUser = JSON.parse(atob(localStorage.getItem('currentUser')!))
       this.currentUser$.next(currentUser)
     } else{
       this.currentUser$.next(undefined)
